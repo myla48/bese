@@ -48,7 +48,7 @@ export default function Showreel() {
         >
           <MediaVideo
             ref={videoRef}
-            src="/video_2026-09-10_08-48-11.mp4"
+            src="https://res.cloudinary.com/nqxdygzi/video/upload/v1789130327/Video_2026-09-10_08-48-11_1.mp4"
             poster="/bg/show reel.jpg"
             className="h-full w-full"
             muted={false}
