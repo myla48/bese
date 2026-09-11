@@ -14,13 +14,15 @@ export default function VideoEditor() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="mb-8 flex items-baseline justify-between">
-        <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-mist-dim">
-          Stories shaped in the timeline.
-        </p>
-        <span className="hidden font-mono text-[11px] text-mist-dim sm:block">
-          {videoProjects.length} PROJECTS
-        </span>
+      <div className="mb-12">
+        <div className="flex items-baseline justify-between">
+          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-mist-dim">
+            Stories shaped in the timeline.
+          </p>
+          <span className="hidden font-mono text-[11px] text-mist-dim sm:block">
+            {videoProjects.length} PROJECTS
+          </span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-3 gap-6">
