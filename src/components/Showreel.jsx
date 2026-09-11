@@ -15,7 +15,7 @@ export default function Showreel() {
     if (playing) {
       el.pause();
     } else {
-      el.play().catch(() => {});
+      el.play().catch(() => { });
     }
   };
 
@@ -25,8 +25,13 @@ export default function Showreel() {
   };
 
   return (
-    <section id="showreel" className="relative bg-void py-28 sm:py-36">
-      <div className="mx-auto max-w-7xl px-6 sm:px-10">
+    <section id="showreel" className="relative bg-void py-28 sm:py-36 overflow-hidden" >
+      <div className="absolute inset-0 z-0 opacity-40">
+        <img src="/bg/show-reel.jpg" alt="showreel background" className="h-full w-full object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-void/60 z-0" />
+
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 z-10">
         <SectionHeading
           code="SELECTED WORK — 03"
           title="Showreel"
@@ -44,7 +49,7 @@ export default function Showreel() {
           <MediaVideo
             ref={videoRef}
             src="/video_2026-09-10_08-48-11.mp4"
-            poster="/images/showreel-poster.jpg"
+            poster="/bg/show reel.jpg"
             className="h-full w-full"
             muted={false}
             loop
@@ -64,9 +69,8 @@ export default function Showreel() {
             className="absolute inset-0 flex items-center justify-center"
           >
             <span
-              className={`flex h-20 w-20 items-center justify-center rounded-full border border-ink/60 bg-void/40 backdrop-blur-sm transition-all duration-400 ease-out group-hover:scale-105 ${
-                playing ? "opacity-0 group-hover:opacity-100" : "opacity-100"
-              }`}
+              className={`flex h-20 w-20 items-center justify-center rounded-full border border-ink/60 bg-void/40 backdrop-blur-sm transition-all duration-400 ease-out group-hover:scale-105 ${playing ? "opacity-0 group-hover:opacity-100" : "opacity-100"
+                }`}
             >
               {playing ? (
                 <Pause size={24} strokeWidth={1.25} className="text-ink" />

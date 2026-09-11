@@ -390,14 +390,14 @@ export const cinematographData = {
 };
 
 export const videoProjects = [
-
   {
     "id": 1,
     "code": "EDIT_02",
     "title": "HUAWEI comany",
     "category": "Video",
     "timecode": "00:00:00",
-    "video": "/videos/video editor/HUAWEI comany.mp4",
+    "video": "https://res.cloudinary.com/nqxdygzi/video/upload/v1789129855/Huawei_Comany.mp4",
+    "isLocal": false,
     "poster": ""
   },
   {
@@ -406,7 +406,8 @@ export const videoProjects = [
     "title": "MODIFYING TAT's VIDEO",
     "category": "Video",
     "timecode": "00:00:00",
-    "video": "/videos/video editor/modifying tat's video.mp4",
+    "video": "https://res.cloudinary.com/qkyz4cxh/video/upload/v1789127369/modifying_tat_s_video.mp4",
+    "isLocal": false,
     "poster": ""
   },
   {
@@ -415,7 +416,8 @@ export const videoProjects = [
     "title": "RECREATING kSI VIDEO",
     "category": "Video",
     "timecode": "00:00:00",
-    "video": "/videos/video editor/recreating ksi video.mp4",
+    "video": "https://res.cloudinary.com/eytqn1pn/video/upload/v1789127034/recreating_ksi_video.mp4",
+    "isLocal": false,
     "poster": ""
   },
   {
@@ -424,7 +426,8 @@ export const videoProjects = [
     "title": "ኢያቄም ወ ሓና",
     "category": "Video",
     "timecode": "00:00:00",
-    "video": "/videos/video editor/ኢያቄም ወ ሓና.mp4",
+    "video": "https://res.cloudinary.com/nqxdygzi/video/upload/v1789130091/ኢያቄም_ወ_ሓና.mp4",
+    "isLocal": false,
     "poster": ""
   },
   {
@@ -434,6 +437,12 @@ export const videoProjects = [
     "category": "Video",
     "timecode": "00:00:00",
     "video": "/videos/video editor/adidas vs puma.mp4",
+    "isLocal": true,
     "poster": ""
   }
 ];
+
+export const showreelVideo = {
+  video: "https://res.cloudinary.com/nqxdygzi/video/upload/v1789130327/Video_2026-09-10_08-48-11_1.mp4",
+  isLocal: false
+};
