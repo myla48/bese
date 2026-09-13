@@ -25,7 +25,7 @@ export default function VideoEditor() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-6 sm:gap-8">
         {videoProjects.map((project, i) => (
           <VideoCard
             key={project.id}

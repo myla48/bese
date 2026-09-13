@@ -18,7 +18,7 @@ function FolderCard({ folder, onClick, index }) {
     >
       {folder.image ? (
         <>
-          <img src={folder.image} alt={folder.name} className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-700 ease-out group-hover:scale-110 group-hover:opacity-100" />
+          <img src={folder.image} alt={folder.name} className="absolute inset-0 h-full w-full sm:object-cover object-contain opacity-60 transition-transform duration-700 ease-out group-hover:scale-110 group-hover:opacity-100" />
           <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/20 transition-colors" />
           <span className="relative z-10 font-mono text-xs sm:text-sm uppercase tracking-[0.2em] font-bold text-white drop-shadow-md">{folder.name}</span>
         </>
@@ -91,7 +91,7 @@ export default function Cinematography() {
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
         {currentNode.children?.map((child, i) => {
           if (child.type === "folder") {
             return (

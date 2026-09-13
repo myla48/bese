@@ -30,15 +30,27 @@ function ParallaxRig({ children }) {
 export default function CinematicScene() {
   const [reducedMotion, setReducedMotion] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     setReducedMotion(
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     );
-    setIsMobile(window.innerWidth < 768);
+    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+      setIsTablet(window.innerWidth > 480 && window.innerWidth <= 1024);
+    };
+    
+    handleResize();
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const particleCount = isMobile ? 90 : 220;
+  if (reducedMotion && isMobile) return null;
+
+  const isDesktop = !isMobile && !isTablet;
+  const particleCount = isMobile ? 50 : isTablet ? 90 : 220;
 
   return (
     <div className="absolute inset-0" aria-hidden="true">
@@ -54,7 +66,7 @@ export default function CinematicScene() {
           ) : (
             <ParallaxRig>
               <FilmParticles count={particleCount} />
-              {!isMobile && <FloatingCamera />}
+              {isDesktop && <FloatingCamera />}
             </ParallaxRig>
           )}
         </Suspense>

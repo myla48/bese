@@ -27,7 +27,7 @@ export default function Showreel() {
   return (
     <section id="showreel" className="relative bg-void py-28 sm:py-36 overflow-hidden" >
       <div className="absolute inset-0 z-0 opacity-40">
-        <img src="/bg/show-reel.jpg" alt="showreel background" className="h-full w-full object-cover" />
+        <img src="/bg/show-reel.jpg" alt="showreel background" className="h-full w-full sm:object-cover object-contain" />
       </div>
       <div className="absolute inset-0 bg-void/60 z-0" />
 

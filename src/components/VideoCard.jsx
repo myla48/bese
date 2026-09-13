@@ -52,7 +52,7 @@ export default function VideoCard({ project, onOpen, index = 0 }) {
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void/80 via-void/10 to-transparent transition-opacity duration-500 group-hover:opacity-60" />
 
-        <span className="pointer-events-none absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-ink/30 bg-void/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+        <span className="pointer-events-none absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-ink/30 bg-void/40 opacity-100 md:opacity-0 backdrop-blur-sm transition-opacity duration-300 md:group-hover:opacity-100">
           <Play size={13} strokeWidth={1.5} className="ml-0.5 text-ink" />
         </span>
 

@@ -41,7 +41,7 @@ export default function MediaImage({
         loading={loading}
         decoding="async"
         onError={() => setErrored(true)}
-        className={`h-full w-full object-cover ${imgClassName}`}
+        className={`h-full w-full sm:object-cover object-contain ${imgClassName}`}
       />
     </div>
   );

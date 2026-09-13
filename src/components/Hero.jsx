@@ -43,10 +43,10 @@ export default function Hero() {
       className="relative flex min-h-[100svh] w-full items-end overflow-hidden bg-void"
     >
       {/* Portrait, integrated as a full-bleed cinematic backdrop rather than a framed photo */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex items-center justify-center">
         <video
           src="/videos/bese.mp4"
-          className="h-full w-full object-cover object-top opacity-70"
+          className="h-full w-full sm:object-cover object-contain sm:object-top opacity-70"
           autoPlay
           loop
           muted
@@ -65,7 +65,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[6vh] bg-void sm:h-[4vh]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[6vh] bg-void sm:h-[4vh]" />
 
-      <div className="relative z-10 w-full px-6 pb-[10vh] pt-32 sm:px-10 sm:pb-[8vh]">
+      <div className="relative z-10 w-full px-4 sm:px-10 pb-[10vh] pt-32 sm:pb-[8vh]">
         <div className="mx-auto max-w-7xl">
           <motion.span
             initial={{ opacity: 0 }}

@@ -28,7 +28,7 @@ export default function Work() {
           transition={{ duration: 0.8 }}
           className="absolute inset-0 z-0"
         >
-          <img src={backgrounds[tab]} alt="background" className="h-full w-full object-cover" />
+          <img src={backgrounds[tab]} alt="background" className="h-full w-full sm:object-cover object-contain" />
         </motion.div>
       </AnimatePresence>
       <div className="absolute inset-0 bg-deep/60 z-0" />
@@ -43,7 +43,7 @@ export default function Work() {
           <div
             role="tablist"
             aria-label="Portfolio category"
-            className="relative flex w-fit border border-mist-dim/25"
+            className="relative flex w-full sm:w-fit overflow-x-auto whitespace-nowrap border border-mist-dim/25 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
             {TABS.map((t) => (
               <button

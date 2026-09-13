@@ -12,9 +12,12 @@ export default function CustomCursor() {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    let hasTouch = window.matchMedia("(pointer: coarse)").matches;
+    if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+      hasTouch = true;
+    }
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (isTouch || reduced) return;
+    if (hasTouch || reduced) return;
     setEnabled(true);
 
     let x = 0,
